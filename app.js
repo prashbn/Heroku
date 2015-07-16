@@ -7,7 +7,14 @@ var bodyParser = require('body-parser');
 
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('prashbn:Enabled14$:ds047602-a.mongolab.com:47602/heroku_1349rbt5');
+var db = monk('prashbn:broadband@ds047602.mongolab.com:47602/heroku_1349rbt5')
+  /*',
+ {
+  username : 'prashbn',
+  password : 'broadband'
+});*/
+
+//var db = 'mongodb://prashbn:broadband@ds047602.mongolab.com:47602/heroku_1349rbt5'
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -28,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use(function(req,res,next){
+
         req.db = db;
         next();
         });
