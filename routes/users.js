@@ -11,7 +11,8 @@ router.get('/', function(req, res, next) {
  */
 router.get('/userlist', function(req, res) {
     var db = req.db;
-    var collection = db.get('userlist');
+    var collection = db.get('usercollection');
+    console.log("Fetching data from usercollection");
     collection.find({},{},function(e,docs){
         res.json(docs);
     });
