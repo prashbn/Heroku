@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('ds047602-a.mongolab.com:47602/heroku_1349rbt5');
+var db = monk('prashbn:Enabled14$:ds047602-a.mongolab.com:47602/heroku_1349rbt5');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

@@ -15,6 +15,7 @@ router.get('/userlist', function(req, res) {
     console.log("Fetching data from usercollection");
     collection.find({},{},function(e,docs){
         res.json(docs);
+        console.log(e);
     });
 });
 
